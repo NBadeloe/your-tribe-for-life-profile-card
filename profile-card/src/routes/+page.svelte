@@ -1,12 +1,14 @@
 <script>
   import * as prismicH from '@prismicio/helpers';
-  export let document;
+  export let data;
+  const { document } = data
+
 </script>
 
 <main>
   <div class="container">
     <h1>Homepage</h1>
-    <pre>{JSON.stringify(document, null, 2)}</pre>
+    <p> {@html prismicH.asHTML(document.data.content)}</p>
   </div>
 </main>
 
